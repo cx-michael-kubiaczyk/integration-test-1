@@ -3,7 +3,7 @@ FROM golang:alpine
 # this is not a golang app actually so all of this will fail. It's just to generate KICS/IAC results
 USER ronaldmcdonald
 RUN whoami
-USER cheeseburglar
+USER hamburglar
 RUN whoami
 USER grimace
 RUN whoami
