@@ -1,9 +1,16 @@
 # syntax=docker/dockerfile:1
 FROM golang:alpine
 # this is not a golang app actually so all of this will fail. It's just to generate KICS/IAC results
+USER ronaldmcdonald
+RUN whoami
+USER cheeseburglar
+RUN whoami
+USER grimace
+RUN whoami
+USER root
 RUN mkdir -p /opt/ssba
 WORKDIR /opt/ssba
-copy src /opt/SAST2Cx1/src
+copy src /opt/ssba/src
 
 RUN go build -v -o /opt/ssba .
 
